@@ -1,39 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengjing Wu</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: #444;
+      background: #fff;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    a {
+      color: #2aa7c9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .nav {
+      height: 70px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      padding-left: 8%;
+      gap: 45px;
+      font-size: 18px;
+    }
+
+    .nav a {
+      color: #777;
+      font-weight: 500;
+    }
+
+    .nav a.active {
+      font-weight: 700;
+      color: #666;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 60px;
+      padding: 0 25px;
+    }
+
+    .sidebar {
+      text-align: left;
+    }
+
+    .profile-photo {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #eee;
+      padding: 5px;
+      background: white;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      color: #555;
+    }
+
+    .title {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .info {
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .info a {
+      color: #444;
+    }
+
+    .main {
+      max-width: 760px;
+      font-size: 18px;
+    }
+
+    .main p {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #444;
+      margin-top: 45px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #777;
+      font-size: 18px;
+      margin-top: 28px;
+    }
+
+    .publication {
+      margin-bottom: 25px;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      color: #444;
+    }
+
+    .authors {
+      color: #444;
+    }
+
+    .venue {
+      font-style: italic;
+      color: #444;
+    }
+
+    .links {
+      margin-top: 3px;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        display: block;
+        margin-top: 25px;
+      }
+
+      .sidebar {
+        text-align: center;
+        margin-bottom: 35px;
+      }
+
+      .info {
+        text-align: left;
+        display: inline-block;
+      }
+
+      .main {
+        font-size: 16px;
+      }
+
+      .nav {
+        padding-left: 25px;
+        gap: 25px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Your Name</h1>
+  <nav class="nav">
+    <a href="#about" class="active">About</a>
+    <a href="#updates">Updates</a>
+    <a href="cv.pdf">CV</a>
+  </nav>
 
-  <p>
-    I am a recent PhD graduate in Computer Science from the Australian Artificial Intelligence Institute (AAII) at the University of Technology Sydney.
-    My research interests mainly include Probabilistic Machine Learning, Bayesian Deep Learning, and Functional Bayesian Inference.
-  </p>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Mengjing Wu" class="profile-photo" />
 
-  <p>
-    Currently, I focus on the functional inference for Bayesian neural networks (BNNs), including functional variational inference, functional MCMC, and functional diffusion. 
-    I am also interested in the geometric properties of the posterior landscape in BNNs.
-  </p>
+      <div class="name">Mengjing Wu</div>
+      <div class="title">Recent PhD Graduate</div>
 
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://scholar.google.com/citations?user=WPVVxYsAAAAJ&hl=en">Google Scholar</a></li>
-    <li><a href="https://www.linkedin.com/in/mengjing-wu-a42838333/">LinkedIn</a></li>
-    <li><a href="mengjing.wu@uts.student.edu.au">CV</a></li>
-  </ul>
+      <div class="info">
+        📍 Sydney, Australia<br />
+        ✉️ <a href="mailto:mengjing.wu@uts.edu.au">Email</a><br />
+        🔗 <a href="https://www.linkedin.com/in/mengjing-wu-a42838333/">LinkedIn</a><br />
+        🎓 <a href="https://scholar.google.com.au/citations?user=WPVVxYsAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    </aside>
 
-  <h2>Publications</h2>
-  <ul>
-    <li>
-      <b>Bridging the gap between variational inference and stochastic gradient MCMC in function space</b><br>
-      Mengjing Wu, Junyu Xuan, Jie Lu<br>
-      International Conference on Learning Representations (ICLR), 2025
-    </li>
-  </ul>
+    <main class="main">
+      <section id="about">
+        <p>
+          I am a recent PhD graduate in Computer Science from the Australian Artificial Intelligence Institute (AAII)
+          at the University of Technology Sydney.
+        </p>
 
-  <h2>Contact</h2>
-  <p>Email: mengjing.wu@uts.edu.au</p>
+        <p>
+          My research interests mainly include probabilistic machine learning, Bayesian deep learning,
+          and Bayesian neural networks.
+        </p>
+
+        <p>
+          Currently, I focus on functional inference for Bayesian neural networks (BNNs), including
+          functional variational inference, functional MCMC, and functional diffusion. I am also interested
+          in the geometric properties of posterior distributions.
+        </p>
+
+        <p>
+          I am currently seeking postdoctoral research opportunities.
+        </p>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <h3>Conference</h3>
+
+        <div class="publication">
+          <div class="publication-title">
+            Bridging the Gap Between Variational Inference and Stochastic Gradient MCMC in Function Space
+          </div>
+          <div class="authors">
+            <strong>Mengjing Wu</strong>, Junyu Xuan, Jie Lu
+          </div>
+          <div class="venue">
+            International Conference on Learning Representations (ICLR), 2025
+          </div>
+          <div class="links">
+            [<a href="https://proceedings.iclr.cc/paper_files/paper/2025/file/99f139d3484c548a1586f342d635dd43-Paper-Conference.pdf">full paper</a>]
+            [<a href="#">code</a>]
+          </div>
+        </div>
+      </section>
+
+      <section id="updates">
+        <h2>Updates</h2>
+
+        <p>
+          <strong>2025:</strong> Our paper was accepted by ICLR 2025.
+        </p>
+
+        <p>
+          <strong>2026:</strong> I received my PhD degree from the University of Technology Sydney.
+        </p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
